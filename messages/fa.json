@@ -1,0 +1,9 @@
+{
+  "HomePage": {
+    "title": "سلام دنیا",
+    "about": "برو به صفحه درباره"
+  },
+  "LocaleLayout": {
+    "title": "مثال next-intl"
+  }
+}

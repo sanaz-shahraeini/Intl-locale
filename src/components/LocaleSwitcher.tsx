@@ -4,12 +4,14 @@ import { useLocale } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 
+type LocaleType = "en" | "de" | "fa";
+
 export default function LocaleSwitcher() {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
 
-  const switchLocale = (newLocale: string) => {
+  const switchLocale = (newLocale: LocaleType) => {
     // Remove the current locale from pathname
     const currentPath = pathname.replace(`/${locale}`, "") || "/";
     const newPath = `/${newLocale}${currentPath}`;
@@ -31,6 +33,13 @@ export default function LocaleSwitcher() {
         className="border border-white"
       >
         Deutsch
+      </Button>
+      <Button
+        variant={locale === "fa" ? "default" : "outline"}
+        onClick={() => switchLocale("fa")}
+        className="border border-white"
+      >
+        فارسی
       </Button>
     </div>
   );
