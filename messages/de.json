@@ -2,5 +2,9 @@
   "HomePage": {
     "title": "Hallo Welt!",
     "about": "Gehe zur Über-Seite"
+  },
+  "LocaleLayout": {
+    "title": "next-intl Beispiel"
   }
+  
 }
